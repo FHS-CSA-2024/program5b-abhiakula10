@@ -1,7 +1,7 @@
 public class Car {
     private String carName;
-    private double milesDriven;
-    private double gallonsUsed;
+    private double mileDriven;
+    private double gallonUsed;
     
     public Car(){
         carName = "";
@@ -10,56 +10,46 @@ public class Car {
         
     }
     
-    public Car(String name, double miles, double gallons) {
+    public Car(String name, double mile, double gallon) {
         carName = name;
-        milesDriven = miles;
-        gallonsUsed = gallons;
+        mileDriven = mile;
+        gallonUsed = gallon;
         
     }
     
     public String getName(){
-        String n1 = carName;
-        
-        
+        String n1 = name;
         return carName;
     }
     
-    public double getMiles(){
-        double m1 = milesDriven;
-        
-        
+    public double getMile(){
+        double m1 = mileDriven;
         return m1;
     }
     
-    public double getGallons(){
-        double g1 = gallonsUsed;
-        
-        
+    public double getGallon(){
+        double g1 = gallonUsed;
         return g1;
     }
     
     public void setName(String newName){
         carName = newName;
-        
     }
     
-    public void setMiles(double newMiles){
-        milesDriven = newMiles;
+    public void setMile(double newMile){
+        mileDriven = newMile;
     }
     
-    public void setGallons(double newGallons){
-        gallonsUsed = newGallons;
+    public void setGallon(double newGallon){
+        gallonUsed = newGallon;
     }
     
     public double calculateAverage(){
-        double avg = milesDriven / gallonsUsed;
-
-        
+        double avg = mileDriven / gallonUsed;
         return avg; 
     }
-    
     public String toString(){
-        return carName + "averaged" + calculateAverage() + "m/g";
+        return carName + "Averaged" + calculateAverage() + "mile/gallon";
         
     }
     
