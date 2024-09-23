@@ -24,9 +24,9 @@ public class CarTester{
     
     public static void main(String[] args) {
         Car car2 = addCar();
-        System.out.println(Car2);
+        System.out.println(car2);
         Car car3 = addCar();
-        System .out.println(Car3);
+        System .out.println(car3);
         
         
         
