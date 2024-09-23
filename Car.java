@@ -1,57 +1,48 @@
-public class Car {
-    private String carName;
-    private double mileDriven;
-    private double gallonUsed;
+import java.util.Scanner;
+
+
+
+
+public class CarTester{
     
-    public Car(){
-        carName = "";
-        milesDriven = 0;
-        gallonsUsed = 0;
+    public static Car addCar(){
+    System.out.println("Enter the name od the car");
+        Scanner nameScanner = new Scanner(System.in);
+        String name1 = nameScanner.nextLine();
+        
+    System.out.println("Enter the miles of the car");
+        Scanner mileScanner = new Scanner(System.in);
+        double mile1 = mileScanner.nextDouble();
+        
+     System.out.println("Enter the gallons of the car");
+        Scanner gallonScanner = new Scanner(System.in);
+        double gallon1 = gallonScanner.nextDouble();
+        
+        Car car1 = new Car(name1, mile1, gallon1);
+        return car1;
+    }
+    
+    public static void main(String[] args) {
+        Car car2 = addCar();
+        System.out.println(Car2);
+        Car car3 = addCar();
+        System .out.println(Car3);
+        
+        
         
     }
-    
-    public Car(String name, double mile, double gallon) {
-        carName = name;
-        mileDriven = mile;
-        gallonUsed = gallon;
         
-    }
     
-    public String getName(){
-        String n1 = name;
-        return carName;
-    }
     
-    public double getMile(){
-        double m1 = mileDriven;
-        return m1;
-    }
     
-    public double getGallon(){
-        double g1 = gallonUsed;
-        return g1;
-    }
     
-    public void setName(String newName){
-        carName = newName;
-    }
     
-    public void setMile(double newMile){
-        mileDriven = newMile;
-    }
     
-    public void setGallon(double newGallon){
-        gallonUsed = newGallon;
-    }
     
-    public double calculateAverage(){
-        double avg = mileDriven / gallonUsed;
-        return avg; 
-    }
-    public String toString(){
-        return carName + "Averaged" + calculateAverage() + "mile/gallon";
-        
-    }
+    
+    
+    
+    
+    
     
 }
-
